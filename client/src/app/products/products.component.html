@@ -1,0 +1,84 @@
+<barra-superior></barra-superior>
+<div class="container">
+&nbsp;
+</div>
+<div class="row">
+
+<div class="col-sm-4" >  </div>
+
+  <div class="col-sm-4" >
+    <form method="get" action="index.php">
+
+
+        <div class="form-group row">
+
+          <div class="col-sm-12">
+            <input type="text"  name="busqueda"  [(ngModel)]="articuloFilter.nombre"  class="form-control form-control-lg" id="lgFormGroupInput" placeholder="Buscar" > 
+          </div>
+
+        </div>
+
+    </form>
+</div>
+<div class="col-sm-4" ></div>
+</div>
+
+
+<div class="album text-muted">
+   <div class="container">
+      <div class="row">
+         <div *ngFor="let item of products   | filterBy: articuloFilter" class="card">
+            <img src="/assets/imagenesBase/{{item.img}}" width="300px;" alt="Card image cap">
+
+            <p class="card-text">
+              Nombre: {{item.nombre}}
+              <br>
+              Precio: {{item.precio}}
+              <br>
+              Unidades: {{item.stock}}
+              <br>
+
+    </p>
+
+
+ <div class="form-group row">
+
+                <div class="col-sm-4">
+                   <button id="singlebutton" [routerLink]="['/product-detail',item._id]"name="singlebutton" class="btn btn-primary btn-sm">Ver mas</button>
+                </div>
+                <!--div class="col-xs-4"><input class="form-control input-sm" [(ngModel)]="inputCantidad[item.$key]" type="number" min=1 [max]="item.stock"></div-->
+
+              <div class="col-sm-4">
+
+
+                 <!--select   class="form-control input-sm">
+                    <option value="1">1</option>
+                       <option value="2">2</option>
+                     </select-->
+                     <input type="number"     value="1" min="1" max="{{item.stock}}" #inputx>
+
+
+              </div>
+                  <div class="col-sm-4">
+                   <button type="button" style="color:#fff;"(click)="addCanasta(item,inputx.value);" class="btn btn-warning btn-sm">Añadir</button>
+                 </div>
+
+
+
+            </div>
+         </div>
+
+      </div>
+   </div>
+
+
+
+<footer class="text-muted">
+  <div class="container">
+    <p class="float-right">
+      <a href="products#">Back to top</a>
+    </p>
+    <p> </p>
+    <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+  </div>
+</footer>

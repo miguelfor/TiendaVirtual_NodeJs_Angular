@@ -1,0 +1,10 @@
+
+    .form-signin{
+      margin-top: 200px;
+      max-width: 550px;
+      color: #eee;
+      margin-top: 20%;
+      background: rgba(0, 0, 0, 0.52) ;
+      box-shadow: 1px -1px rgba(44, 125, 89, 0.63);
+      border-radius: 10px;
+      }

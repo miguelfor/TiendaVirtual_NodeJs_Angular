@@ -1,0 +1,29 @@
+<div class="container1" *ngIf="!identity">
+<div class="container" >
+
+<form  #loginForm="ngForm" (ngSubmit)="onSubmit()" class="form-signin col-md-7">
+<h2 class="form-signin-heading">Please sign in</h2>
+
+<div *ngIf="errorMessage">
+   <div class="alert alert-danger">
+      <strong>Error</strong> {{errorMessage}}
+   </div>
+</div>
+<p>
+   <label>Correo electronico</label>
+   <input type="email" #email="ngModel" class="form-control"  placeholder="Email address" name="email" [(ngModel)]="user.email" required>
+   <span *ngIf="!email.valid && email.touched"> el email es obligatorio	</span>
+</p>
+<p>
+   <label>Contraseña</label>
+   <input type="password" #password="ngModel" class="form-control" placeholder="Password" name=""  name="email" [(ngModel)]="user.password"required>
+</p>
+<p>
+   <input type="submit" class="btn btn-primary btn-block" value="Entrar">
+</p>
+</form>
+
+
+
+</div>
+</div>

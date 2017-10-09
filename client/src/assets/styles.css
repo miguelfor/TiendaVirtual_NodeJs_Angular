@@ -1,0 +1,15 @@
+body{
+  margin:0px;
+  background-color: #fff;
+
+height:100%;
+       }
+       .container1{
+               background-image: url(imagenesBase/login-fondo.jpg)  ;
+               -webkit-background-size: cover;
+               -moz-background-size: cover;
+               -o-background-size: cover;
+               background-size: cover;
+               width:100%; height:100%;
+               overflow: hidden;
+              }

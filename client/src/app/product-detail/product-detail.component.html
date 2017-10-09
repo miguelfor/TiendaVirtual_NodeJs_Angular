@@ -1,0 +1,47 @@
+
+
+  <barra-superior></barra-superior>
+
+
+
+
+
+     <div class="container" *ngIf="product" >
+        <div class="row">
+  <div class="col-sm-12">
+    <h1 class="card-text">
+      {{product.nombre}}
+
+
+    </h1>
+    <hr>
+  </div >
+          <div class="col-sm-6">
+
+          <div >
+
+            <div>
+              <img src="/assets/imagenesBase/{{product.img}}"  width="400px;"alt="">
+            </div>
+
+
+
+            <div class="col-sm-4">
+               <button id="singlebutton" [routerLink]="['/product']"name="singlebutton" class="btn btn-primary btn-sm">volver</button>
+            </div>
+          </div>
+
+
+           </div>
+           <div class="col-sm-6">
+             <p class="card-text">
+
+               <b>Precio: </b>${{product.precio}}
+<br>
+               <b>Unidades:</b> {{product.stock}}
+
+
+             </p>
+           </div>
+        </div>
+     </div>

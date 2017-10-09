@@ -1,0 +1,64 @@
+
+
+  <barra-superior></barra-superior>
+
+
+
+
+
+     <div class="container" *ngFor="let product of products " >
+        <div class="row">
+  <div class="col-sm-12" >
+    <h1 class="card-text">
+      {{product.nombre}}
+
+
+    </h1>
+    <hr>
+  </div >
+          <div class="col-sm-6">
+
+          <div >
+
+            <div>
+              <img src="/assets/imagenesBase/{{product.img}}"  width="100px;"alt="">
+            </div>
+
+
+
+
+          </div>
+
+
+           </div>
+           <div class="col-sm-6">
+             <p class="card-text">
+
+               <b>Precio: </b>${{product.precio}}
+<br>
+               <b>Unidades:</b> {{product.cantidad}}
+
+
+             </p>
+           </div>
+        </div>
+
+     </div>
+
+
+
+
+     <div class="container"  >
+        <div class="row">
+  <div class="col-sm-12" >
+    <h1 class="card-text">
+
+Total:{{total}}   <button id="singlebutton"(click)="carritoCancelar()" name="singlebutton" class="btn btn-primary btn-sm">Cancelar</button>
+   <button id="singlebutton"  (click)="carritoPagar()" name="singlebutton" class="btn btn-primary btn-sm">Pagar</button>
+
+    </h1>
+    <hr>
+
+
+  </div>
+     </div>
